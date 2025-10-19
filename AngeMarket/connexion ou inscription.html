@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion & Inscription – Ange Market</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #00bcd4, #333);
+      color: #333;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 12px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 15px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tab:hover, .tab.active {
+      background-color: #00bcd4;
+    }
+
+    .form-container {
+      display: none;
+      padding: 40px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .form-container.active {
+      display: block;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input, select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00bcd4;
+    }
+
+    .plans {
+      display: none;
+      margin-top: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+    }
+
+    .plan {
+      margin-bottom: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+    }
+
+    .plan h4 {
+      margin: 0;
+      color: #00bcd4;
+    }
+
+    .footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+     <a href="file:///C:/Users/user/Desktop/mes%20code/PAGE%20DACUIELLE%20DE%20ANGE%20MARKET.HTML.html">Accueil</a>
+     <a href="file:///C:/Users/user/Desktop/mes%20code/PAGE%20DE%20PRODUITS%20VEDETTE%20DE%20ANGE%20MARKET.HTML">Produits en vedette</a>
+     <a href="file:///C:/Users/user/Desktop/mes%20code/Produit.html">Produits</a>
+     <a href="file:///C:/Users/user/Desktop/mes%20code/connexion%20ou%20inscription.html?#">Connexion</a>
+  </nav>
+
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" onclick="showForm('login')">Connexion</div>
+      <div class="tab" onclick="showForm('register')">Inscription</div>
+    </div>
+
+    <!-- Formulaire de connexion -->
+    <div id="login" class="form-container active">
+      <h2>Connexion</h2>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Mot de passe" required>
+        <select required>
+          <option value="">Type d’utilisateur</option>
+          <option value="acheteur">Acheteur</option>
+          <option value="vendeur">Vendeur</option>
+        </select>
+        <button type="submit">Se connecter</button>
+      </form>
+    </div>
+
+    <!-- Formulaire d'inscription -->
+    <div id="register" class="form-container">
+      <h2>Inscription</h2>
+      <form>
+        <input type="text" placeholder="Nom complet" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Mot de passe" required>
+        <select id="userType" onchange="togglePlans()" required>
+          <option value="">Type d’utilisateur</option>
+          <option value="acheteur">Acheteur</option>
+          <option value="vendeur">Vendeur</option>
+        </select>
+
+        <!-- Choix des abonnements vendeurs -->
+        <div id="plans" class="plans">
+          <h3>Choisissez votre formule d’abonnement :</h3>
+          <div class="plan">
+            <h4>Basic</h4>
+            <p>1000 FCFA / mois</p>
+          </div>
+          <div class="plan">
+            <h4>Pro</h4>
+            <p>2000 FCFA / mois</p>
+          </div>
+          <div class="plan">
+            <h4>VIP</h4>
+            <p>5000 FCFA / mois</p>
+          </div>
+          <label>Méthode de paiement :</label>
+          <select required>
+            <option value="">Sélectionnez un mode de paiement</option>
+            <option value="orange">Orange Money</option>
+            <option value="mtn">MTN Money</option>
+          </select>
+        </div>
+
+        <button type="submit">S’inscrire</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Ange Market — Tous droits réservés</p>
+  </div>
+
+  <script>
+    // Bascule entre connexion et inscription
+    function showForm(formId) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.form-container').forEach(f => f.classList.remove('active'));
+      document.querySelector(`.tab[onclick="showForm('${formId}')"]`).classList.add('active');
+      document.getElementById(formId).classList.add('active');
+    }
+
+    // Affiche ou masque les plans selon le type d'utilisateur
+    function togglePlans() {
+      const userType = document.getElementById('userType').value;
+      const plans = document.getElementById('plans');
+      plans.style.display = userType === 'vendeur' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

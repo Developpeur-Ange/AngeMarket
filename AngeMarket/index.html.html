@@ -1,0 +1,390 @@
+﻿<!DOCTYPE  html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bienvenue sur Ange Market</title>
+	<script src="https://kit.fontawesome.com/65cd6cbbaa.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+   
+ nav {
+      
+background-color: #333;
+     
+padding: 10px;
+      
+text-align: center;
+   
+margin: 8px 20px ;
+justify-content: center;
+display: flex;
+gap: 50px;
+padding: 15px 0;
+}
+
+ 
+nav input{
+margin: 8px 20px ;
+    padding: 15px;
+    border-radius: 30px;
+    border:none;
+    outline:none;
+    background-color: #f2f2f2;
+}  
+nav a {
+      color: white;
+      text-decoration: none;
+    font-size: 16px;  margin: 0 15px;
+   flex-direction: column; display: flex; align-items: center;
+      transition: color 0.3s;  font-weight: bold;
+ }
+
+nav a:hover {
+      color: #00bfff;
+    }
+
+nav i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 15px 0;
+    }
+
+    /* ===== LIENS PRINCIPAUX ===== */
+    nav > ul {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav > ul > li {
+      position: relative; /* Nécessaire pour les sous-menus */
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    nav i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    /* ===== SOUS-MENUS ===== */
+    .submenu {
+      display: none; /* caché par défaut */
+      position: absolute;
+      top: 70px; /* position sous le lien parent */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      border-radius: 6px;
+      list-style: none;
+      padding: 10px 0;
+      min-width: 160px;
+      z-index: 10;
+    }
+
+    .submenu li {
+      padding: 8px 20px;
+      text-align: center;
+    }
+
+    .submenu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+
+    .submenu a:hover {
+      background-color: #00bfff;
+    }
+
+    /* ===== AFFICHER LE SOUS-MENU AU SURVOL ===== */
+    nav li:hover .submenu {
+      display: block;
+    }    
+header {
+      background-color: #f4f4f4;
+      padding: 40px;
+      text-align: center;
+    }
+
+    
+section {
+      padding: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    
+li {
+      padding: 5px 0;
+    }
+
+    
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  /* position: fixed;  <-- à retirer */
+  /* bottom: 0;        <-- à retirer */
+  width: 100%;
+}
+
+
+button {  
+color: white;
+cursor: pointer;
+background-color: black;
+width: 200px;
+    }
+ 
+  nav {
+      position: relative; /* Nécessaire pour les sous-menus */
+    }
+
+
+css
+.produits {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.produit {
+  border: 1px solid #ccc;
+  padding: 15px;
+  
+width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+.produit . card {
+ display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+
+.content{    
+    background-image: url(./image1\.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #424242;
+    height: 100vh;
+    width: 100 vh;
+    
+}
+.content h1{
+    font-size: 40px;
+    margin-top: 5px;
+}
+.content p{
+    font-size: 20px;
+    margin: 20px;
+    margin-top: 25px;
+
+}
+.content button{
+    margin-top: 25px;
+    padding: 15px 50px;
+    border: none;
+    background: #f63e4e;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.produits {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: flex-start; /* aligne en haut */
+  gap: 20px; /* espace entre les produits */
+  flex-wrap: wrap; /* permet de revenir à la ligne si l’écran est petit */
+  margin-top: 20px;
+}
+
+.produit {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.produit img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.produit button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.produit button:hover {
+  background-color: #00bfff;
+}
+
+</style>
+
+<!--Barre de navigation-->
+<nav>
+<a href="file:///C:/Users/user/Desktop/mes%20code/PAGE%20DACUIELLE%20DE%20ANGE%20MARKET.HTML.html">Accueil</a>
+<a href="file:///C:/Users/user/Desktop/mes%20code/PAGE%20DE%20PRODUITS%20VEDETTE%20DE%20ANGE%20MARKET.HTML">Produits en Vedette</a>
+<a href="file:///C:/Users/user/Desktop/mes%20code/Produit.html>Produits</a>
+<a href="file:///C:/Users/user/Desktop/mes%20code/connexion%20ou%20inscription.html?#">Connexion/Inscription</a>
+
+
+<!-- Barre de recherche-->
+  <form >
+                <input type="search" placeholder="Rechercher">
+  </form>
+</nav>
+<!--Banniere d'accueil-->
+<header>
+<h1>Bienvenue sur Ange Market</h1>
+<p>La meilleure plateforme pour vendre et acheter facilement</p>
+</header>
+ <section class="content">
+        <h1>Nouveautés</h1>
+	<p>Notre nouveau catalogue avec les technologies les plus avancées </p>
+        <button>DECOUVRIR</button>
+	<h2>-50% de Reduction pour 1h30min8s<br>Vendeure qui aurait plus de 4 etoile serait recompenser</h2>
+	<h2>Vous êtes vendeur?</h2>
+	<p>Créez un compte Prenium et commencez a vendre aujourd’hui !</p>
+    <a href="#"><button>S'inscrire comme vendeur</button></a>
+    </section>
+<!--Categories-->
+<section>
+<h2>Nos Categories populaires</h2>
+ <nav>
+    <ul>
+      <li>
+        <a href="#vetements"><i class="fa-solid fa-shirt"></i>Vêtements</a>
+        <ul class="submenu">
+          <li><a href="#">Homme</a></li>
+          <li><a href="#">Femme</a></li>
+          <li><a href="#">Enfant</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#electronique"><i class="fa-solid fa-microchip"></i>Électronique</a>
+        <ul class="submenu">
+          <li><a href="#">Téléphones</a></li>
+          <li><a href="#">Ordinateurs</a></li>
+          <li><a href="#">Accessoires Tech</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#accessoires"><i class="fa-solid fa-bag-shopping"></i>Accessoires</a>
+        <ul class="submenu">
+          <li><a href="#">Sacs</a></li>
+          <li><a href="#">Bijoux</a></li>
+          <li><a href="#">Lunettes</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#maison"><i class="fa-solid fa-house"></i>Maison</a>
+        <ul class="submenu">
+          <li><a href="#">Décoration</a></li>
+          <li><a href="#">Cuisine</a></li>
+          <li><a href="#">Mobilier</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+</section>
+<!--Appel a l'action-->
+
+
+<section>
+  <h2>Produits en vedette</h2>
+
+  <div class="produits">
+
+    <div class="produit">
+      <img src="img.jpg" alt="Produit 1">
+      <h3>Chaussures sport</h3>
+      <p>Prix : 10 000 FCFA</p>
+      <button>Voir</button>
+    </div>
+
+    <div class="produit">
+      <img src="image2.jpg" alt="Produit 2">
+      <h3>Chausset</h3>
+      <p>Prix : 8 500 FCFA</p>
+      <button>Voir</button>
+    </div>
+
+    <div class="produit">
+      <img src="image3.jpg" alt="Produit 3">
+      <h3>Montre connectée</h3>
+      <p>Prix : 12 000 FCFA</p>
+      <button>Voir</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <footer>
+    <p>© 2025 Ange Market. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
